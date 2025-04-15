@@ -19,18 +19,18 @@ form.addEventListener('submit', event => {
   };
 
   promise(delay)
-    .then(resolve => {
+    .then(resolve =>
       iziToast.success({
         position: 'center',
         message: `✅ Fulfilled promise in ${delay}ms`,
-      });
-    })
-    .catch(reject => {
+      })
+    )
+    .catch(reject =>
       iziToast.error({
         position: 'center',
         message: `❌ Rejected promise in ${delay}ms`,
-      });
-    });
+      })
+    );
 
   form.reset();
 });
